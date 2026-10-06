@@ -1,4 +1,4 @@
-/* Dhruv Kapoor — portfolio. Contact sheet: film-base black, print off-white, one china-marker yellow. */
+/* Dhruv Kapoor portfolio. Film-base black, print off-white, one china-marker yellow. */
 
 @font-face {
   font-family: "Archivo";
@@ -124,18 +124,6 @@ a:hover {
   top: 1rem;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 .wrap {
   width: 100%;
   max-width: var(--max);
@@ -174,16 +162,6 @@ a:hover {
   color: var(--ink);
 }
 
-.edge .run {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 1.1em;
-}
-
-.edge .run > span {
-  white-space: nowrap;
-}
-
 .edge-domain {
   display: none;
 }
@@ -208,46 +186,6 @@ a:hover {
 
 /* ---------- Home masthead ---------- */
 
-:root {
-  --sprocket-x: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8'%3E%3Crect x='4' y='0' width='12' height='8' rx='1.6' fill='%23a9a8a0'/%3E%3C/svg%3E");
-  --sprocket-y: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='20'%3E%3Crect x='0' y='4' width='8' height='12' rx='1.6' fill='%23a9a8a0'/%3E%3C/svg%3E");
-}
-
-.masthead {
-  padding-top: clamp(2rem, 6vw, 4rem);
-}
-
-.name {
-  font-size: clamp(4rem, 30.5vw, 15rem);
-  font-stretch: 62%;
-  font-weight: 800;
-  line-height: 0.82;
-  letter-spacing: -0.012em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.name span {
-  display: block;
-}
-
-.masthead__aside {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem 2rem;
-  margin-top: clamp(1.5rem, 3vw, 2.25rem);
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-}
-
-.role {
-  flex: 1 1 22rem;
-  font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
-  font-stretch: 87.5%;
-  font-weight: 550;
-  line-height: 1.35;
-}
 
 .links {
   display: flex;
@@ -285,28 +223,6 @@ a:hover {
   color: var(--ink-2);
 }
 
-@media (min-width: 46rem) {
-  .name {
-    font-size: min(15.2vw, 15.25rem);
-  }
-
-  .name span {
-    display: inline;
-  }
-}
-
-/* ---------- The sheet ---------- */
-
-.sheet-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: clamp(4rem, 9vw, 7rem);
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--rule);
-}
-
 .section-title {
   font-size: clamp(1.375rem, 2.5vw, 1.75rem);
   font-stretch: 75%;
@@ -314,34 +230,6 @@ a:hover {
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.01em;
-}
-
-/* Phone: one continuous vertical strip, perforations down both sides. */
-ul.sheet {
-  display: grid;
-  margin-top: 2rem;
-  padding: 0 1.75rem;
-  list-style: none;
-  background:
-    var(--sprocket-y) left 0.5rem top / 0.5rem 1.25rem repeat-y,
-    var(--sprocket-y) right 0.5rem top / 0.5rem 1.25rem repeat-y,
-    var(--rebate);
-}
-
-.sheet > li {
-  padding-block: 1.25rem 2rem;
-}
-
-.sheet > li + li {
-  border-top: 1px solid var(--film);
-}
-
-.frame__link {
-  display: block;
-  height: 100%;
-  color: inherit;
-  text-decoration: none;
-  outline: none;
 }
 
 .neg {
@@ -357,56 +245,6 @@ ul.sheet {
   padding: 0.5rem 0.125rem 0.125rem;
 }
 
-/* Wider screens: strips of frames abutting, perforations along top and bottom. */
-@media (min-width: 46rem) {
-  ul.sheet {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 4rem;
-    padding: 0;
-    background: none;
-  }
-
-  .sheet > li {
-    padding: 0;
-  }
-
-  .sheet > li + li {
-    border-top: 0;
-  }
-
-  .sheet .neg {
-    padding: 1.625rem 0.75rem;
-    background:
-      var(--sprocket-x) left top 0.5rem / 1.25rem 0.5rem repeat-x,
-      var(--sprocket-x) left bottom 0.5rem / 1.25rem 0.5rem repeat-x,
-      var(--rebate);
-  }
-
-  .sheet > li:nth-child(2n) .neg {
-    border-left: 1px solid var(--film);
-  }
-
-  .sheet .frame__title,
-  .sheet .frame__desc,
-  .sheet .frame__result {
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 72rem) {
-  ul.sheet {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .sheet > li:nth-child(2n) .neg {
-    border-left: 0;
-  }
-
-  .sheet > li:not(:nth-child(3n + 1)) .neg {
-    border-left: 1px solid var(--film);
-  }
-}
-
 .shot {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -420,16 +258,6 @@ ul.sheet {
   object-fit: cover;
   object-position: top center;
   transition: transform 0.7s var(--ease-out);
-}
-
-.shot--phone img {
-  object-fit: contain;
-  object-position: center;
-}
-
-.frame__link:hover .shot img,
-.frame__link:focus-visible .shot img {
-  transform: scale(1.025);
 }
 
 /* A frame with no print yet: the screenshot file has not been added. */
@@ -453,30 +281,6 @@ ul.sheet {
   background: #0a0a09;
   outline: 1px dashed var(--rule);
   outline-offset: -0.75rem;
-}
-
-.frame__title {
-  margin-top: 1.25rem;
-  font-size: clamp(1.875rem, 3.2vw, 2.375rem);
-  font-stretch: 72%;
-  font-weight: 750;
-  line-height: 0.95;
-  letter-spacing: -0.005em;
-}
-
-.frame__desc {
-  max-width: 40ch;
-  margin-top: 0.625rem;
-  color: var(--ink-2);
-  line-height: 1.5;
-  text-wrap: pretty;
-}
-
-.frame__result {
-  margin-top: 0.875rem;
-  font-weight: 600;
-  font-stretch: 87.5%;
-  font-variant-numeric: tabular-nums;
 }
 
 /* ---------- China-marker strokes ---------- */
@@ -506,9 +310,6 @@ ul.sheet {
   transition: stroke-dashoffset 0.6s var(--ease-out);
 }
 
-
-.frame__link:hover .mark path,
-.frame__link:focus-visible .mark path,
 .is-marked > .mark path {
   stroke-dashoffset: 0;
 }
@@ -560,76 +361,12 @@ ul.sheet {
   stroke-dashoffset: 1;
 }
 
-/* ---------- Tools strip: a run of film ---------- */
-
-.tools {
-  margin-top: clamp(5rem, 11vw, 8.5rem);
-}
-
-.tools .section-title {
-  padding-bottom: 1rem;
-}
-
-.strip {
-  position: relative;
-  padding: 2.25rem 0;
-  background: var(--rebate);
-}
-
-.strip::before,
-.strip::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 0.5rem;
-  background-image: var(--sprocket-x);
-  background-size: 1.25rem 0.5rem;
-  background-repeat: repeat-x;
-}
-
-.strip::before {
-  top: 0.625rem;
-}
-
-.strip::after {
-  bottom: 0.625rem;
-}
-
-.strip ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.75rem;
-  padding: 0;
-  list-style: none;
-}
-
-.strip li {
-  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
-  font-stretch: 75%;
-  font-weight: 600;
-  line-height: 1.35;
-  white-space: nowrap;
-}
-
 /* ---------- Footer ---------- */
 
 .foot {
   margin-top: clamp(5rem, 11vw, 8.5rem);
   padding-block: 3rem 2.5rem;
   border-top: 1px solid var(--rule);
-}
-
-.foot__mail {
-  display: inline-block;
-  max-width: 100%;
-  font-size: clamp(1.75rem, 7vw, 4.25rem);
-  font-stretch: 68%;
-  font-weight: 750;
-  line-height: 1.05;
-  overflow-wrap: anywhere;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.16em;
 }
 
 .foot__row {
@@ -757,13 +494,8 @@ ul.sheet {
   padding: 0.625rem;
 }
 
-
 .print .shot {
   aspect-ratio: 16 / 9;
-}
-
-.print .shot--phone {
-  aspect-ratio: 4 / 3;
 }
 
 @media (min-width: 40rem) {
@@ -994,10 +726,6 @@ ul.sheet {
     animation: none !important;
   }
 
-  .frame__link:hover .shot img,
-  .frame__link:focus-visible .shot img {
-    transform: none;
-  }
 }
 
 /* ---------- Hero: the work streams past on both sides ---------- */
@@ -1344,87 +1072,6 @@ ul.sheet {
       animation-timeline: view();
       animation-range: entry 5% cover 30%;
     }
-  }
-}
-
-/* ---------- Tools ticker ---------- */
-
-.ticker {
-  margin-top: clamp(7rem, 14vw, 12rem);
-}
-
-.ticker__track {
-  display: flex;
-  margin-top: 1.75rem;
-  padding-block: clamp(1.25rem, 3vw, 2rem);
-  overflow: hidden;
-  border-block: 1px solid var(--rule);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
-}
-
-.ticker__run {
-  display: flex;
-  flex: none;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  animation: ticker 48s linear infinite;
-}
-
-.ticker__run li {
-  display: flex;
-  align-items: center;
-  padding-inline: 0.4em;
-  font-size: clamp(2.5rem, 7vw, 6rem);
-  font-stretch: 62%;
-  font-weight: 800;
-  line-height: 1;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.ticker__run li:nth-child(even) {
-  color: var(--edge);
-}
-
-.ticker__run li::after {
-  content: "";
-  width: 0.14em;
-  height: 0.14em;
-  margin-left: 0.8em;
-  border-radius: 50%;
-  background: var(--rule);
-}
-
-.ticker__track:hover .ticker__run {
-  animation-play-state: paused;
-}
-
-@keyframes ticker {
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ticker__track {
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
-
-  .ticker__run {
-    flex-wrap: wrap;
-    flex: 1;
-    animation: none;
-  }
-
-  .ticker__run[aria-hidden="true"] {
-    display: none;
-  }
-
-  .ticker__run li {
-    font-size: clamp(1.75rem, 5vw, 3.5rem);
   }
 }
 

@@ -2,7 +2,6 @@
 (function () {
   var NS = "http://www.w3.org/2000/svg";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var canHover = window.matchMedia("(hover: hover)").matches;
 
   // Paths are drawn at the mark's real pixel size, so the nib stays the same
   // width on a phone and a desktop. Each one wobbles a few pixels, like a hand.
@@ -164,21 +163,5 @@
   );
   inks.forEach(function (m) {
     if (m.classList.contains("is-waiting")) inkObserver.observe(m);
-  });
-
-  // On touch screens there is no hover, so frames get boxed as they cross mid-screen.
-  if (canHover) return;
-  var frameObserver = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        e.target.classList.add("is-marked");
-        frameObserver.unobserve(e.target);
-      });
-    },
-    { rootMargin: "-40% 0px -40% 0px" }
-  );
-  document.querySelectorAll(".sheet .neg:not(.is-marked)").forEach(function (neg) {
-    frameObserver.observe(neg);
   });
 })();
