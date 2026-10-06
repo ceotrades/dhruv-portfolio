@@ -11,7 +11,7 @@ Plain HTML, CSS and JavaScript. No build step, no npm install.
 | AI Content Agent | ai-content-agent-liard.vercel.app | github.com/ceotrades/ai-content-agent (public) |
 | Plyo | runs on device, no live link | github.com/ceotrades/plyo (public) |
 | Pure Water Ready | purewaterreadywindowcleaning.co.uk | github.com/ceotrades/pure-water-ready (private) |
-| The Window Man | thewindowmanpembs.co.uk | github.com/ceotrades/the-window-man (private) |
+| The Window Man | the-window-man.co.uk | github.com/ceotrades/the-window-man (private) |
 | NOVÉ | noveconcierge.com | github.com/ceotrades/nove-concierge (private) |
 
 ## 1. Preview it locally
