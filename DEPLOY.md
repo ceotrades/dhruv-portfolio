@@ -6,7 +6,7 @@ Plain HTML, CSS and JavaScript. No build step, no npm install.
 
 | Project | Live | Source |
 |---|---|---|
-| Portfolio (this folder) | not deployed yet, see step 3 | github.com/ceotrades/dhruv-portfolio (public) |
+| Portfolio (this folder) | dhruv-portfolio-inky.vercel.app | github.com/ceotrades/dhruv-portfolio (public) |
 | GEMINI | geminiceo.netlify.app | github.com/ceotrades/gemini-trading-dashboard (public) |
 | AI Content Agent | ai-content-agent-liard.vercel.app | github.com/ceotrades/ai-content-agent (public) |
 | Plyo | runs on device, no live link | github.com/ceotrades/plyo (public) |
