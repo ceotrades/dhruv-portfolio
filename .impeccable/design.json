@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T17:00:00Z",
+  "title": "Design System: Dhruv Kapoor",
+  "extensions": {
+    "colorMeta": {
+      "film": { "role": "neutral", "displayName": "Film Base", "canonical": "#0c0c0b", "tonalRamp": ["#0c0c0b", "#161614", "#2a2a27", "#4a4a45", "#6e6d67", "#8f8e87", "#bdbcb4", "#ecebe4"] },
+      "rebate": { "role": "neutral", "displayName": "Rebate", "canonical": "#161614", "tonalRamp": ["#0c0c0b", "#161614", "#2a2a27", "#4a4a45", "#6e6d67", "#8f8e87", "#bdbcb4", "#ecebe4"] },
+      "rule": { "role": "neutral", "displayName": "Hairline", "canonical": "#2a2a27", "tonalRamp": ["#0c0c0b", "#161614", "#2a2a27", "#4a4a45", "#6e6d67", "#8f8e87", "#bdbcb4", "#ecebe4"] },
+      "edge": { "role": "neutral", "displayName": "Edge Print Grey", "canonical": "#8f8e87", "tonalRamp": ["#0c0c0b", "#161614", "#2a2a27", "#4a4a45", "#6e6d67", "#8f8e87", "#bdbcb4", "#ecebe4"] },
+      "sprocket": { "role": "neutral", "displayName": "Sprocket Grey", "canonical": "#a9a8a0", "tonalRamp": ["#0c0c0b", "#161614", "#2a2a27", "#4a4a45", "#6e6d67", "#a9a8a0", "#bdbcb4", "#ecebe4"] },
+      "ink-2": { "role": "neutral", "displayName": "Print Dim", "canonical": "#bdbcb4", "tonalRamp": ["#0c0c0b", "#161614", "#2a2a27", "#4a4a45", "#6e6d67", "#8f8e87", "#bdbcb4", "#ecebe4"] },
+      "ink": { "role": "neutral", "displayName": "Print", "canonical": "#ecebe4", "tonalRamp": ["#0c0c0b", "#161614", "#2a2a27", "#4a4a45", "#6e6d67", "#8f8e87", "#bdbcb4", "#ecebe4"] },
+      "marker": { "role": "primary", "displayName": "China Marker Yellow", "canonical": "#f2c230", "tonalRamp": ["#3a2c05", "#5c460a", "#7f6110", "#a37e17", "#c99c1f", "#f2c230", "#f6d670", "#fbecb8"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The name on the home masthead only. Uppercase, 62% width; two stacked lines on phone, one line from 46rem at min(15.2vw, 15.25rem)." },
+      "headline": { "displayName": "Headline", "purpose": "Project page title and 404 title. Uppercase, 62% width, balanced." },
+      "title": { "displayName": "Title", "purpose": "Frame titles. Story headings, pager names and the footer email use the same condensed voice at 68-72% width." },
+      "section": { "displayName": "Section", "purpose": "Home section heads, uppercase. Tools strip entries share the 75% width at 600." },
+      "lead": { "displayName": "Lead", "purpose": "Home intro, project summary (36ch) and the opening line of a story section." },
+      "body": { "displayName": "Body", "purpose": "Prose at 65ch, frame descriptions at 40ch. UI text sits at 87.5% width, 550-650 weight." },
+      "label": { "displayName": "Edge Print", "purpose": "Martian Mono, uppercase. Frame numbers, status, domains, counts, captions." },
+      "stack": { "displayName": "Stack", "purpose": "Martian Mono stack lists on project pages, sentence case, in Print." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The single easing curve for every transition." },
+      { "name": "state", "value": "0.2s", "purpose": "Colour, underline and border changes on links, buttons, topbar and pager." },
+      { "name": "pager-nudge", "value": "0.3s, translateX(0.25rem)", "purpose": "Pager arrow moves outward on hover." },
+      { "name": "print-scale", "value": "0.7s, scale(1.025)", "purpose": "Screenshot inside a frame on hover or focus. Disabled under reduced motion." },
+      { "name": "box-draw", "value": "0.6s per side, 0.11s stagger", "purpose": "China-marker box draws side by side via stroke-dashoffset." },
+      { "name": "word-mark-draw", "value": "0.8s", "purpose": "Underline and ring replay once on first scroll into view." }
+    ],
+    "breakpoints": [
+      { "name": "edge-domain / pager split / print padding", "value": "40rem" },
+      { "name": "sheet 2-up, name on one line", "value": "46rem" },
+      { "name": "story 12-column grid", "value": "56rem" },
+      { "name": "sheet 3-up", "value": "72rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Solid Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Primary action on a project page: View live site.",
+      "html": "<a class=\"ds-btn ds-btn-solid\" href=\"#\">View live site<svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7\"/><path d=\"M9 7h8v8\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.625rem; min-height: 3rem; padding: 0.75rem 1.25rem; border: 1.5px solid #ecebe4; border-radius: 0; font-family: Archivo, 'Helvetica Neue', Arial, sans-serif; font-weight: 650; font-stretch: 87.5%; line-height: 1.1; text-decoration: none; transition: background-color 0.2s cubic-bezier(0.16,1,0.3,1), border-color 0.2s cubic-bezier(0.16,1,0.3,1), color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-solid { background: #ecebe4; color: #0c0c0b; } .ds-btn-solid:hover { background: #f2c230; border-color: #f2c230; color: #0c0c0b; } .ds-btn:focus-visible { outline: 2px solid #f2c230; outline-offset: 4px; } .ds-icon { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action: View source. Only where the source is public.",
+      "html": "<a class=\"ds-btn-o\" href=\"#\">View source<svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7\"/><path d=\"M9 7h8v8\"/></svg></a>",
+      "css": ".ds-btn-o { display: inline-flex; align-items: center; gap: 0.625rem; min-height: 3rem; padding: 0.75rem 1.25rem; border: 1.5px solid #ecebe4; border-radius: 0; background: transparent; color: #ecebe4; font-family: Archivo, 'Helvetica Neue', Arial, sans-serif; font-weight: 650; font-stretch: 87.5%; line-height: 1.1; text-decoration: none; transition: border-color 0.2s cubic-bezier(0.16,1,0.3,1), color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-o:hover { border-color: #f2c230; color: #f2c230; } .ds-btn-o:focus-visible { outline: 2px solid #f2c230; outline-offset: 4px; } .ds-icon { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }"
+    },
+    {
+      "name": "Frame (negative)",
+      "kind": "card",
+      "refersTo": "frame",
+      "description": "The system's card: a numbered negative in a rebate strip with sprocket bands, edge print above and below, boxed in china marker when it is a keeper.",
+      "html": "<a class=\"ds-frame\" href=\"#\"><div class=\"ds-neg\"><p class=\"ds-edge\"><span class=\"ds-ink\">01</span><span>Client work</span></p><div class=\"ds-shot\"></div><p class=\"ds-edge\"><span>GoHighLevel &nbsp; Meta Ads &nbsp; WhatsApp AI</span></p><svg class=\"ds-mark\" viewBox=\"0 0 300 230\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path pathLength=\"1\" d=\"M-4 8 C80 3 190 12 306 5\"/><path pathLength=\"1\" d=\"M294 -4 C299 70 291 160 296 235\"/><path pathLength=\"1\" d=\"M304 224 C200 228 100 220 -4 225\"/><path pathLength=\"1\" d=\"M7 233 C2 150 10 70 5 -5\"/></svg></div><h3 class=\"ds-frame-title\">Pure Water Ready</h3><p class=\"ds-frame-desc\">Website, instant quote calculator, CRM and the ads behind it.</p></a>",
+      "css": ".ds-frame { display: block; max-width: 22rem; color: #ecebe4; text-decoration: none; font-family: Archivo, 'Helvetica Neue', Arial, sans-serif; } .ds-neg { position: relative; padding: 1.625rem 0.75rem; background: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8'%3E%3Crect x='4' y='0' width='12' height='8' rx='1.6' fill='%23a9a8a0'/%3E%3C/svg%3E\") left top 0.5rem / 1.25rem 0.5rem repeat-x, url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8'%3E%3Crect x='4' y='0' width='12' height='8' rx='1.6' fill='%23a9a8a0'/%3E%3C/svg%3E\") left bottom 0.5rem / 1.25rem 0.5rem repeat-x, #161614; } .ds-edge { display: flex; justify-content: space-between; gap: 1rem; margin: 0; padding: 0.125rem 0.125rem 0.5rem; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-size: 0.6875rem; font-stretch: 87.5%; font-weight: 500; line-height: 1.3; letter-spacing: 0.06em; text-transform: uppercase; color: #8f8e87; } .ds-shot + .ds-edge { padding: 0.5rem 0.125rem 0.125rem; } .ds-ink { color: #ecebe4; } .ds-shot { aspect-ratio: 16 / 9; background: #050505; } .ds-mark { position: absolute; inset: -0.75rem; width: calc(100% + 1.5rem); height: calc(100% + 1.5rem); overflow: visible; pointer-events: none; transform: rotate(-0.5deg); } .ds-mark path { fill: none; stroke: #f2c230; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 0.6s cubic-bezier(0.16,1,0.3,1); } .ds-mark path:nth-child(2) { transition-delay: 0.11s; } .ds-mark path:nth-child(3) { transition-delay: 0.22s; } .ds-mark path:nth-child(4) { transition-delay: 0.33s; } .ds-frame:hover .ds-mark path, .ds-frame:focus-visible .ds-mark path { stroke-dashoffset: 0; } .ds-frame:focus-visible { outline: none; } .ds-frame-title { margin: 1.25rem 0 0; font-size: clamp(1.875rem, 3.2vw, 2.375rem); font-stretch: 72%; font-weight: 750; line-height: 0.95; letter-spacing: -0.005em; } .ds-frame-desc { max-width: 40ch; margin: 0.625rem 0 0; color: #bdbcb4; line-height: 1.5; }"
+    },
+    {
+      "name": "Edge Print",
+      "kind": "custom",
+      "refersTo": "edge-print",
+      "description": "The film's data line: frame number in Print, status and stack in Edge Print Grey.",
+      "html": "<p class=\"ds-edgeline\"><span><b>05</b> &nbsp; noveconcierge.com</span><span>Client work</span></p>",
+      "css": ".ds-edgeline { display: flex; justify-content: space-between; gap: 1rem; margin: 0; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-size: 0.6875rem; font-stretch: 87.5%; font-weight: 500; line-height: 1.3; letter-spacing: 0.06em; text-transform: uppercase; color: #8f8e87; } .ds-edgeline b { color: #ecebe4; font-weight: 500; }"
+    },
+    {
+      "name": "Word Marks",
+      "kind": "custom",
+      "description": "China-marker underline and ring on real result figures only.",
+      "html": "<p class=\"ds-result\"><span class=\"ds-u\">93 leads at £4.62 each<svg viewBox=\"0 0 200 10\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path d=\"M1 6 C56 2.5 124 8.5 199 3.5\"/></svg></span> in September, prep down to <span class=\"ds-o\">ten<svg viewBox=\"0 0 60 40\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path d=\"M34 3 C52 1 58 11 57 22 C55 38 37 39 25 38 C8 36 2 29 3 17 C5 5 18 2 40 6\"/></svg></span></p>",
+      "css": ".ds-result { margin: 0; color: #ecebe4; font-family: Archivo, 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-stretch: 87.5%; font-size: 1.25rem; } .ds-u, .ds-o { position: relative; white-space: nowrap; } .ds-o { margin-inline: 0.2em; padding-inline: 0.1em; } .ds-u svg, .ds-o svg { position: absolute; overflow: visible; pointer-events: none; } .ds-u svg { left: -0.1em; bottom: -0.3em; width: calc(100% + 0.2em); height: 0.45em; } .ds-o svg { left: -0.3em; top: -0.32em; width: calc(100% + 0.6em); height: calc(100% + 0.64em); } .ds-u path, .ds-o path { fill: none; stroke: #f2c230; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }"
+    },
+    {
+      "name": "Tools Strip",
+      "kind": "custom",
+      "refersTo": "tools-strip",
+      "description": "A full-bleed run of film with sprocket bands, holding the tool list.",
+      "html": "<div class=\"ds-strip\"><ul><li>n8n</li><li>GoHighLevel</li><li>Supabase</li><li>Claude API</li></ul></div>",
+      "css": ".ds-strip { position: relative; padding: 2.25rem 1rem; background: #161614; } .ds-strip::before, .ds-strip::after { content: ''; position: absolute; left: 0; right: 0; height: 0.5rem; background: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8'%3E%3Crect x='4' y='0' width='12' height='8' rx='1.6' fill='%23a9a8a0'/%3E%3C/svg%3E\") 0 0 / 1.25rem 0.5rem repeat-x; } .ds-strip::before { top: 0.625rem; } .ds-strip::after { bottom: 0.625rem; } .ds-strip ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin: 0; padding: 0; list-style: none; } .ds-strip li { color: #ecebe4; font-family: Archivo, 'Helvetica Neue', Arial, sans-serif; font-size: clamp(1.25rem, 2.6vw, 1.75rem); font-stretch: 75%; font-weight: 600; line-height: 1.35; white-space: nowrap; }"
+    },
+    {
+      "name": "Topbar",
+      "kind": "nav",
+      "description": "Project-page navigation: back to all work, and the name.",
+      "html": "<nav class=\"ds-topbar\"><a href=\"#\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 12H5\"/><path d=\"m11 6-6 6 6 6\"/></svg>All work</a><a href=\"#\">Dhruv Kapoor</a></nav>",
+      "css": ".ds-topbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.25rem; font-family: Archivo, 'Helvetica Neue', Arial, sans-serif; } .ds-topbar a { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; color: #ecebe4; font-weight: 600; font-stretch: 87.5%; text-decoration: none; transition: color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-topbar a:hover { color: #f2c230; } .ds-topbar a:focus-visible { outline: 2px solid #f2c230; outline-offset: 4px; } .ds-icon { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }"
+    },
+    {
+      "name": "Pager",
+      "kind": "nav",
+      "description": "Previous and next project between hairlines; name in the condensed title voice, frame number in edge print.",
+      "html": "<div class=\"ds-pager\"><a href=\"#\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 12H5\"/><path d=\"m11 6-6 6 6 6\"/></svg><strong>GEMINI</strong><span>04</span></a><a href=\"#\"><strong>AI Content Agent</strong><span>06</span><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m13 6 6 6-6 6\"/></svg></a></div>",
+      "css": ".ds-pager { display: grid; grid-template-columns: 1fr 1fr; border-block: 1px solid #2a2a27; font-family: Archivo, 'Helvetica Neue', Arial, sans-serif; } .ds-pager a { display: flex; align-items: center; gap: 0.75rem; padding-block: 2rem; color: #ecebe4; text-decoration: none; } .ds-pager a + a { justify-content: flex-end; padding-left: 1.5rem; border-left: 1px solid #2a2a27; } .ds-pager strong { font-size: clamp(1.625rem, 4vw, 2.5rem); font-stretch: 68%; font-weight: 750; line-height: 1; transition: color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-pager span { font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-size: 0.6875rem; letter-spacing: 0.06em; color: #8f8e87; } .ds-pager .ds-icon { width: 1.5rem; height: 1.5rem; fill: none; stroke: #8f8e87; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s, transform 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-pager a:hover strong { color: #f2c230; } .ds-pager a:hover .ds-icon { stroke: #f2c230; } .ds-pager a:first-child:hover .ds-icon { transform: translateX(-0.25rem); } .ds-pager a + a:hover .ds-icon { transform: translateX(0.25rem); } .ds-pager a:focus-visible { outline: 2px solid #f2c230; outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Contact Sheet",
+    "overview": "The site is a darkroom proof sheet. Each build is a numbered frame of negative: a real screenshot sitting in a strip of film base, with the film's own edge print carrying the frame number, the status and the stack. The visitor is the editor with the loupe, and the keepers are boxed in yellow china marker. Everything else is film, print and edge.\n\nDensity is low and the voice is typographic. A monumental condensed name opens the page, then the sheet takes over. Colour is almost absent: a warm near-black ground, off-white print, a grey for edge data, and one yellow that only appears where a hand has touched the sheet or where the visitor is touching it now. There are no shadows, no gradients, no glass and no rounded corners. Depth comes from the two film tones (base and rebate) and from the sprocket perforations that tell you the strip is film.\n\nHand marks are generated, never drawn as assets: each box, underline and ring is an SVG stroke built at the mark's real pixel size from a seeded random, so the nib is the same width on a phone and a desktop and every frame keeps its own hand across redraws.",
+    "keyCharacteristics": [
+      "Two film tones (base and rebate) and hairline rules carry all structure; no elevation.",
+      "Archivo's width axis does the hierarchy work: 62% for the name and page titles, 72-75% for frame and section titles, 87.5-93% for UI and leads, 100% for body.",
+      "Martian Mono appears only as edge print: frame numbers, status, stack, captions.",
+      "China-marker yellow is a hand mark or an interaction state, never resting chrome.",
+      "Sprocket perforations mark anything that is film: the frames and the tools strip."
+    ],
+    "rules": [
+      { "name": "The One Marker Rule", "body": "Yellow appears only as a hand mark (box, underline, ring) or as the response to the visitor's hover, focus or selection. It never fills a resting surface, never colours resting text, never decorates.", "section": "colors" },
+      { "name": "The Keeper Rule", "body": "A box means \"keeper\". Only frames carrying real figures are boxed at rest; a frame with no print (missing screenshot) is never boxed, and the script strips the mark if the image fails.", "section": "colors" },
+      { "name": "The Width Axis Rule", "body": "Hierarchy is set by width first, then weight. Bigger and more important means narrower: 62% for the largest type, widening toward 100% as type gets smaller and longer.", "section": "typography" },
+      { "name": "The Edge Print Rule", "body": "Martian Mono is reserved for data the film itself would carry: frame numbers, status, stack, domain, counts, captions. It never sets prose or headings.", "section": "typography" },
+      { "name": "The Flat Film Rule", "body": "No box-shadow, glow, gradient or blur. If a surface needs to read as separate, make it rebate on base or give it a hairline.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep China Marker Yellow (#f2c230) to hand marks and interaction states only.",
+      "Do set hierarchy with Archivo's width axis: 62% for the name and page titles, 72-75% for frame and section titles, 100% for body.",
+      "Do put frame numbers, status, stack, domains and captions in Martian Mono edge print, uppercase at 0.6875rem with 0.06em tracking.",
+      "Do generate marks at their real pixel size from a seed, one stroke per side, so the nib stays constant and each frame keeps its own hand.",
+      "Do mark any surface that is film with sprocket perforations, and keep frames abutting with a 1px film-base gutter.",
+      "Do box a frame at rest only when it carries a real figure."
+    ],
+    "donts": [
+      "Don't use shadows, glows, gradients, glass or blur.",
+      "Don't round corners on frames, buttons or containers (0px).",
+      "Don't use yellow as a resting fill, a resting text colour or a decorative accent.",
+      "Don't box or mark an empty frame.",
+      "Don't set prose or headings in Martian Mono.",
+      "Don't ship hand marks as static image assets; they are drawn by the script."
+    ]
+  }
+}
